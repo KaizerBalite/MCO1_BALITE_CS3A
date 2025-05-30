@@ -1,0 +1,162 @@
+:root {
+  --bg: #fffaf0;
+  --primary: #7ba67b;
+  --accent: #c4a484;
+  --text: #3e3e3e;
+  --highlight: #ffe4b5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'EB Garamond', serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  transition: all 0.3s ease;
+}
+
+header {
+  background: var(--primary);
+  color: white;
+  padding: 1.2em 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+nav a:hover {
+  color: var(--highlight);
+}
+
+.hero {
+  background: url('https://wallpaperaccess.com/full/1492472.jpg') center/cover no-repeat;
+  text-align: center;
+  color: white;
+  padding: 6em 1em;
+  box-shadow: inset 0 0 0 1000px rgba(123, 166, 123, 0.4);
+}
+
+.hero h1 {
+  font-size: 3em;
+  font-family: 'Georgia', serif;
+  margin-bottom: 0.5em;
+}
+
+.hero p {
+  font-size: 1.4em;
+  font-style: italic;
+}
+
+.content {
+  display: flex;
+  gap: 2em;
+  padding: 2em;
+  background: var(--bg);
+}
+
+.content.full {
+  display: block;
+  padding: 2em;
+}
+
+.main {
+  flex: 3;
+}
+
+.sidebar {
+  flex: 1;
+  text-align: center;
+}
+
+.sidebar img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 1em;
+  aspect-ratio: 3/4;
+  border: 4px solid var(--accent);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin-bottom: 1em;
+}
+
+.sidebar .info p {
+  margin-bottom: 0.6em;
+  font-family: 'Georgia', serif;
+  font-size: 0.95em;
+}
+
+ul {
+  list-style: square;
+  margin-left: 1.5em;
+  color: var(--primary);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 500px;
+  margin-top: 1em;
+}
+
+input, textarea {
+  padding: 0.8em;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: #fffaf0;
+}
+
+button {
+  padding: 0.8em;
+  background: var(--primary);
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #567a56;
+}
+
+footer {
+  background: var(--accent);
+  color: white;
+  text-align: center;
+  padding: 2em 1em;
+  font-family: 'Georgia', serif;
+}
+
+.leaf {
+  width: 20px;
+  height: 20px;
+  background: url('https://png.pngtree.com/png-clipart/20230408/original/pngtree-cartoon-leaf-illustration-png-image_9036566.png') no-repeat center/contain;
+  position: absolute;
+  top: -30px;
+  animation: fall linear infinite;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
